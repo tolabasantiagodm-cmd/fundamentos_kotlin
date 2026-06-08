@@ -14,6 +14,12 @@ class Ejercicio5Test {
     }
 
     @Test
+    fun testSumarHasta3() {
+        val resultado = sumarHasta(3)
+        assertEquals(6, resultado)
+    }
+
+    @Test
     fun testSumarHastaCero() {
         val resultado = sumarHasta(0)
         assertEquals(0, resultado)

@@ -1,10 +1,28 @@
 package edu.etec.ds.fundamentos
 
 fun sumarHasta(n: Int): Int {
+    if (n == 0) {
+        return 0
+    }
+    if (n == 1) {
+        return 1
+    }
+    var acumulador = 0
+    for (i in 1..n) {
+        acumulador += i
+    }
+    return acumulador
     TODO("Sumar todos los numeros desde 1 hasta n (inclusive)")
 }
 
 fun contarPares(inicio: Int, fin: Int): Int {
+    var contador_pares = 0
+    for (i in inicio..fin) {
+        if (i % 2 == 0) {
+            contador_pares++
+        }
+    }
+    return contador_pares
     TODO("Contar numeros pares en el rango [inicio, fin]")
 }
 

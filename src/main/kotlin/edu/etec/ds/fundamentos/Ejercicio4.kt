@@ -11,7 +11,7 @@ fun clasificarNumero(numero: Int): String {
 }
 
 fun evaluarEdad(edad: Int): String {
-    return if (edad < 18) "Menor de edad" else if (edad > 18 && edad < 65) "Adulto" else "Adulto mayor"
+    return if (edad < 18) "Menor de edad" else if (edad in 19..<65) "Adulto" else "Adulto mayor"
     TODO("Menor de edad: < 18, Adulto: 18-65, Adulto mayor: > 65")
 }
 
@@ -21,6 +21,23 @@ fun obtenerDescuento(monto: Double): Double {
 }
 
 fun calcular(operador: Char, a: Int, b: Int): Double {
-    return if (operador = '+')
+     if (operador == '+') {
+       return (a + b).toDouble()
+    }
+     if (operador == '-') {
+       return (a - b).toDouble()
+    }
+     if (operador == '*' ) {
+       return (a * b).toDouble()
+    }
+     if (operador == '/') {
+        if (b == 0) {
+            return 0.0
+        }
+         return (a / b).toDouble()
+
+
+     }
+    return 0.0
     TODO("Realizar operacion: + - * /. Retornar 0.0 si division por cero u operador invalido")
 }
